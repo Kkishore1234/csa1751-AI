@@ -1,0 +1,9 @@
+import itertools
+
+def crypt_arithmetic():
+    for perm in itertools.permutations('0123456789', 8):
+        s, e, n, d, m, o, r, y = map(int, perm)
+        if s != 0 and m != 0 and s*1000 + e*100 + n*10 + d + m*1000 + o*100 + r*10 + e == s*10000 + o*1000 + n*100 + e*10 + y:
+            print(f"{s}{e}{n}{d} + {m}{o}{r}{e} = {s}{o}{n}{e}{y}")
+
+crypt_arithmetic()
